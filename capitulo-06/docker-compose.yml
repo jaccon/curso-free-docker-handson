@@ -1,0 +1,14 @@
+version: '2'
+services:
+ site1_front:
+  image: nginx
+  volumes: 
+   - ./site1/public_html:/usr/share/nginx/html
+  ports:
+   - 8080:80
+ site2_frontend:
+  image: nginx 
+  volumes:
+   - ./site2/public_html:/usr/share/nginx/html
+  ports:
+  - 8081:80 
